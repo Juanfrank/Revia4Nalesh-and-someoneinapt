@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Revia Race</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/comps</xpath>
+					<success>Invert</success>
+					</li>
+					<li Class="PatchOperationAdd">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]</xpath>
+						<value>
+							<comps />
+						</value>
+					</li>
+				</operations>
+			</li>
+			<!--
+			Making them less suppressible the more tails they get (See mod page for what that means, for comparison it takes 100 corpses sacrificed to get to tier 9)
+			Soulreap tier 1 is their base state, weaker than a normal human so not adding any for that. -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier2"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.05</Suppressability> <!-- Once they got their first upgrade they become a bit more fearless -->
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier3"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.1</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier4"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.20</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier5"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.30</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier6"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.4</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier9"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.5</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier8"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.7</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier9"]/stages/li</xpath>
+					<value>
+					<statOffsets>
+						<Suppressability>-0.9</Suppressability> 
+					</statOffsets>
+					</value>
+			</li>
+			<!-- Based on O21 orcs. Less carry weight but slightly above average dodge chance -->
+			<li Class="PatchOperationAdd">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/statBases</xpath>
+				  <value>
+					<MeleeDodgeChance>1.1</MeleeDodgeChance>
+					<MeleeCritChance>1.10</MeleeCritChance>
+					<MeleeParryChance>1</MeleeParryChance>
+					<SmokeSensitivity>0.80</SmokeSensitivity>
+					<CarryWeight>40</CarryWeight>
+					<CarryBulk>30</CarryBulk>				
+				  </value>
+			</li>
+		<!-- Based on O21 orcs. with bites being a bit less blunt and a bit more sharp due to proper canines -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>left fist</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>3</power>
+							<cooldownTime>1.66</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>0.75</armorPenetrationBlunt>
+							<surpriseAttack>
+								<extraMeleeDamages>
+								<li>
+								<def>Stun</def>
+								<amount>22</amount>
+								</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right fist</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>3</power>
+							<cooldownTime>1.66</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>0.75</armorPenetrationBlunt>
+							<surpriseAttack>
+								<extraMeleeDamages>
+								<li>
+								<def>Stun</def>
+								<amount>22</amount>
+								</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>4</power>
+							<cooldownTime>5.05</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationBlunt>1</armorPenetrationBlunt>
+							<surpriseAttack>
+								<extraMeleeDamages>
+								<li>
+								<def>Stun</def>
+								<amount>30</amount>
+								</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>Bite</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.57</cooldownTime>
+							<chanceFactor>0.33</chanceFactor>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetrationSharp>0.18</armorPenetrationSharp>					
+							<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+							<surpriseAttack>
+								<extraMeleeDamages>
+								<li>
+								<def>Stun</def>
+								<amount>30</amount>
+								</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+						</li>
+					</tools>
+				</value>
+			</li>
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/comps</xpath>
+				<value>
+					<li>
+					  <compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
+
+		</operations>
+		</match>	
+	</Operation>
+</Patch>
