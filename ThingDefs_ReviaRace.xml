@@ -35,7 +35,7 @@
 			Making them less suppressible the more tails they get (See mod page for what that means, for comparison it takes 100 corpses sacrificed to get to tier 9)
 			Soulreap tier 1 is their base state, weaker than a normal human so not adding any for that. -->
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier2"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier2"]/stages/li</xpath>
 					<value>
 					<statOffsets>
 						<Suppressability>-0.05</Suppressability> <!-- Once they got their first upgrade they become a bit more fearless -->
@@ -43,7 +43,7 @@
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier3"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier3"]/stages/li</xpath>
 					<value>
 					<statOffsets>
 						<Suppressability>-0.1</Suppressability> 
@@ -51,7 +51,7 @@
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier4"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier4"]/stages/li</xpath>
 					<value>
 					<statOffsets>
 						<Suppressability>-0.20</Suppressability> 
@@ -59,7 +59,7 @@
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier5"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier5"]/stages/li</xpath>
 					<value>
 					<statOffsets>
 						<Suppressability>-0.30</Suppressability> 
@@ -67,7 +67,7 @@
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier6"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier6"]/stages/li</xpath>
 					<value>
 					<statOffsets>
 						<Suppressability>-0.4</Suppressability> 
@@ -75,27 +75,21 @@
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier9"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier7"]/stages/li/statOffsets</xpath>
 					<value>
-					<statOffsets>
 						<Suppressability>-0.5</Suppressability> 
-					</statOffsets>
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier8"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier8"]/stages/li/statOffsets</xpath>
 					<value>
-					<statOffsets>
 						<Suppressability>-0.7</Suppressability> 
-					</statOffsets>
 					</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/HediffDefs[defName="ReviaRaceSoulreapTier9"]/stages/li</xpath>
+				<xpath>/Defs/HediffDef[defName="ReviaRaceSoulreapTier9"]/stages/li/statOffsets</xpath>
 					<value>
-					<statOffsets>
 						<Suppressability>-0.9</Suppressability> 
-					</statOffsets>
 					</value>
 			</li>
 			<!-- Based on O21 orcs. Less carry weight but slightly above average dodge chance -->
