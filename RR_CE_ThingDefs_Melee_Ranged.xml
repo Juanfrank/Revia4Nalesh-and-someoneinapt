@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+	
+    <mods>
+        <li>Revia Race</li>
+    </mods>
+	
+		<match Class="PatchOperationSequence">
+		<operations>
+		
+			<!-- Remove unimplemented guns and blessed serrated dagger, yet to be adjusted  -->
+			
+				<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="ReviaFlechetteCannon" or
+				defName="ReviaThrowingKnife" or
+				defName="ReviaBlessedSerratedDagger"
+				]</xpath>
+				</li>
+				
+			<!-- ================================ MELEE WEAPONS ==================================== -->
+				
+				<!-- ReviaSerratedScythe -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedScythe"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>2</cooldownTime>
+								<armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Shaft</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>edge</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>40</power>
+								<cooldownTime>3.5</cooldownTime>
+								<armorPenetrationBlunt>1.8</armorPenetrationBlunt>
+								<armorPenetrationSharp>3.24</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedScythe"]/statBases</xpath>
+					<value>
+						<Bulk>13</Bulk>
+						<MeleeCounterParryBonus>0.67</MeleeCounterParryBonus>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedScythe"]/statBases/Mass</xpath>
+					<value>
+						<Mass>3.5</Mass>						
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedScythe"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>2</MeleeCritChance>
+							<MeleeParryChance>0.78</MeleeParryChance>
+							<MeleeDodgeChance>0.67</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+				
+				
+				<!-- ReviaSerratedSword -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedSword"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Poke</li>
+								</capacities>
+								<power>8</power>
+								<cooldownTime>1.5</cooldownTime>
+								<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>point</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>16</power>
+								<cooldownTime>1.8</cooldownTime>
+								<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+								<armorPenetrationSharp>1.32</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>edge</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>16</power>
+								<cooldownTime>1.8</cooldownTime>
+								<armorPenetrationBlunt>1.782</armorPenetrationBlunt>
+								<armorPenetrationSharp>0.8</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedSword"]/statBases</xpath>
+					<value>
+						<Bulk>4</Bulk>
+						<MeleeCounterParryBonus>0.38</MeleeCounterParryBonus>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedSword"]/statBases/Mass</xpath>
+					<value>
+						<Mass>1.5</Mass>						
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedSword"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>1.8</MeleeCritChance>
+							<MeleeParryChance>0.58</MeleeParryChance>
+							<MeleeDodgeChance>0.48</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ReviaSerratedSword"]/weaponTags</xpath>
+					<value>
+						<li>CE_OneHandedWeapon</li>
+					</value>
+				</li>
+				
+				<!-- ReviaSerratedDagger -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Poke</li>
+								</capacities>
+								<power>2</power>
+								<cooldownTime>1.32</cooldownTime>
+								<armorPenetrationBlunt>0.3</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>blade</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>12</power>
+								<cooldownTime>1.75</cooldownTime>
+								<armorPenetrationBlunt>0.4</armorPenetrationBlunt>
+								<armorPenetrationSharp>0.37</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>point</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>9</power>
+								<cooldownTime>1.75</cooldownTime>
+								<armorPenetrationBlunt>1.532</armorPenetrationBlunt>
+								<armorPenetrationSharp>8.79</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]/statBases</xpath>
+					<value>
+						<Bulk>1.5</Bulk>
+						<MeleeCounterParryBonus>0.15</MeleeCounterParryBonus>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]/statBases/Mass</xpath>
+					<value>
+						<Mass>1</Mass>						
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>2</MeleeCritChance>
+							<MeleeParryChance>0.25</MeleeParryChance>
+							<MeleeDodgeChance>0.1</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ReviaSerratedDagger"]/weaponTags</xpath>
+					<value>
+						<li>CE_Sidearm_Melee</li>
+						<li>CE_OneHandedWeapon</li>
+					</value>
+				</li>
+
+				<!-- ReviaChainSword -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaChainSword"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Poke</li>
+								</capacities>
+								<power>2</power>
+								<cooldownTime>1.4</cooldownTime>
+								<armorPenetrationBlunt>0.375</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>blade</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>30</power>
+								<cooldownTime>2.65</cooldownTime>
+								<armorPenetrationBlunt>6.75</armorPenetrationBlunt>
+								<armorPenetrationSharp>6.67</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaChainSword"]/statBases</xpath>
+					<value>
+						<Bulk>9</Bulk>
+						<MeleeCounterParryBonus>0.27</MeleeCounterParryBonus>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaChainSword"]/statBases/Mass</xpath>
+					<value>
+						<Mass>4</Mass>						
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaChainSword"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>0.54</MeleeCritChance>
+							<MeleeParryChance>0.27</MeleeParryChance>
+							<MeleeDodgeChance>0.13</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ReviaChainSword"]/weaponTags</xpath>
+					<value>
+						<li>CE_OneHandedWeapon</li>
+					</value>
+				</li>
+
+				<!-- ReviaBlessedSerratedScythe -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedScythe"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>1.8</cooldownTime>
+								<armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Shaft</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>edge</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>62</power>
+								<cooldownTime>3.2</cooldownTime>
+								<armorPenetrationBlunt>3.6</armorPenetrationBlunt>
+								<armorPenetrationSharp>5.62</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedScythe"]/statBases</xpath>
+					<value>
+						<Bulk>13</Bulk>
+						<MeleeCounterParryBonus>0.67</MeleeCounterParryBonus>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedScythe"]/statBases/Mass</xpath>
+					<value>
+						<Mass>3.5</Mass>						
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedScythe"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>2.5</MeleeCritChance>
+							<MeleeParryChance>0.78</MeleeParryChance>
+							<MeleeDodgeChance>0.67</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+				
+				<!-- ReviaBlessedSerratedSword -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedSword"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Poke</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>1.4</cooldownTime>
+								<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>point</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>28</power>
+								<cooldownTime>1.6</cooldownTime>
+								<armorPenetrationBlunt>1.11</armorPenetrationBlunt>
+								<armorPenetrationSharp>2.64</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>edge</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>28</power>
+								<cooldownTime>1.6</cooldownTime>
+								<armorPenetrationBlunt>3.564</armorPenetrationBlunt>
+								<armorPenetrationSharp>1.6</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedSword"]/statBases</xpath>
+					<value>
+						<Bulk>4</Bulk>
+						<MeleeCounterParryBonus>0.38</MeleeCounterParryBonus>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedSword"]/statBases/Mass</xpath>
+					<value>
+						<Mass>1.5</Mass>						
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedSword"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>2.4</MeleeCritChance>
+							<MeleeParryChance>0.58</MeleeParryChance>
+							<MeleeDodgeChance>0.48</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ReviaBlessedSerratedSword"]/weaponTags</xpath>
+					<value>
+						<li>CE_OneHandedWeapon</li>
+					</value>
+				</li>
+				
+				<!-- ReviaSerratedDagger -->			
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>handle</label>
+								<capacities>
+									<li>Poke</li>
+								</capacities>
+								<power>3</power>
+								<cooldownTime>1.22</cooldownTime>
+								<armorPenetrationBlunt>0.3</armorPenetrationBlunt>
+								<chanceFactor>0.15</chanceFactor>
+								<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>blade</label>
+								<capacities>
+									<li>Cut</li>
+								</capacities>
+								<power>18</power>
+								<cooldownTime>1.6</cooldownTime>
+								<armorPenetrationBlunt>0.6</armorPenetrationBlunt>
+								<armorPenetrationSharp>0.54</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+							</li>
+							<li Class="CombatExtended.ToolCE">
+								<label>point</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>16</power>
+								<cooldownTime>1.6</cooldownTime>
+								<armorPenetrationBlunt>3.064</armorPenetrationBlunt>
+								<armorPenetrationSharp>17.58</armorPenetrationSharp>
+								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+							</li>
+						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]/statBases</xpath>
+					<value>
+						<Bulk>1.5</Bulk>
+						<MeleeCounterParryBonus>0.15</MeleeCounterParryBonus>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]/statBases/Mass</xpath>
+					<value>
+						<Mass>1</Mass>						
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]</xpath>
+					<value>
+						<equippedStatOffsets>
+							<MeleeCritChance>3</MeleeCritChance>
+							<MeleeParryChance>0.25</MeleeParryChance>
+							<MeleeDodgeChance>0.1</MeleeDodgeChance>
+						</equippedStatOffsets>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ReviaSerratedDagger"]/weaponTags</xpath>
+					<value>
+						<li>CE_Sidearm_Melee</li>
+						<li>CE_OneHandedWeapon</li>
+					</value>
+				</li>
+				
+			<!-- ======================================== RANGED WEAPONS ========================================== -->
+				
+				<!-- Repeating Crossbow -->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ReviaRepeatingCrossbow"]/tools</xpath>
+					<value>
+					<tools>
+					  <li Class="CombatExtended.ToolCE">
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>7</power>
+						<cooldownTime>1.6</cooldownTime>
+						<armorPenetrationBlunt>0.65</armorPenetrationBlunt>
+					  </li>
+					</tools>
+				  </value>
+				</li>
+		
+				<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				  <defName>ReviaRepeatingCrossbow</defName>
+				  <statBases>
+					<Bulk>8</Bulk>
+					<SwayFactor>2.65</SwayFactor>
+					<ShotSpread>0.5</ShotSpread>
+					<SightsEfficiency>0.6</SightsEfficiency>
+					<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+				  </statBases>
+
+				  <costList>
+					<Steel>60</Steel>
+				  </costList>
+
+				  <Properties>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>True</hasStandardCommand>
+					<defaultProjectile>Projectile_CrossbowBolt_Steel</defaultProjectile>
+					<burstShotCount>2</burstShotCount>
+					<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+					<warmupTime>1</warmupTime>
+					<range>26</range>
+					<soundCast>Bow_Large</soundCast>
+				  </Properties>
+
+				  <AmmoUser>
+					<magazineSize>10</magazineSize>
+					<reloadTime>0.8</reloadTime>
+					<reloadOneAtATime>true</reloadOneAtATime>
+					<ammoSet>AmmoSet_CrossbowBolt</ammoSet>
+				  </AmmoUser>
+
+				  <FireModes>
+					<aimedBurstShotCount>2</aimedBurstShotCount>
+					<aiAimMode>SupressFire</aiAimMode>
+					<aiUseBurstMode>false</aiUseBurstMode>
+					<noSingleShot>true</noSingleShot>
+				  </FireModes>
+
+				  <weaponTags>
+					<li>NeolithicRangedHeavy</li>
+					<li>NeolithicRangedChief</li>
+					<li>CE_Bow</li>
+					<li>ReviaRangedAdvanced</li>
+				  </weaponTags>
+				</li>
+				
+		</operations>
+		</match>
+	</Operation>
+
+</Patch>
