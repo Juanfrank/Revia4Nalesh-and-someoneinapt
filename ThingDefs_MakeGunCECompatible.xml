@@ -75,9 +75,9 @@
 				  </AmmoUser>
 
 				  <FireModes>
-					<aiAimMode>Snapshot</aiAimMode>
-					<aiAimMode>SuppressFire</aiAimMode>
-					<aiUseBurstMode>True</aiUseBurstMode>
+					<aimedBurstShotCount>2</aimedBurstShotCount>
+					<aiAimMode>AimedShot</aiAimMode>
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
 				  </FireModes>
 
 				  <weaponTags>
