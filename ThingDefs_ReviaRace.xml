@@ -92,11 +92,10 @@
 						<Suppressability>-0.9</Suppressability> 
 					</value>
 			</li>
-			<!-- Based on O21 orcs. Less carry weight but slightly above average dodge chance -->
+			<!-- Based on O21 orcs. Dodge chance already defined in Base Race, therefore not included -->
 			<li Class="PatchOperationAdd">
 			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ReviaRaceAlien"]/statBases</xpath>
 				  <value>
-					<MeleeDodgeChance>1.1</MeleeDodgeChance>
 					<MeleeCritChance>1.10</MeleeCritChance>
 					<MeleeParryChance>1</MeleeParryChance>
 					<SmokeSensitivity>0.80</SmokeSensitivity>
