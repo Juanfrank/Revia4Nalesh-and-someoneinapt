@@ -10,7 +10,7 @@
 			<operations>
 
 				<li Class="PatchOperationRemove">
-				<xpath>/Defs/ScenarioDef[defName="ReviaExclave"]/parts/li[thingDef="ReviaThrowingKnife"]</xpath>
+				<xpath>/Defs/ScenarioDef[defName="ReviaExclave"]/scenario/parts/li[thingDef="ReviaThrowingKnife"]</xpath>
 				</li>
 
 			</operations>
