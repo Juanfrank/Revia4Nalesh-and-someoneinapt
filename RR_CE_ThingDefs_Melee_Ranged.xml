@@ -17,6 +17,8 @@
 				</li>
 				
 			<!-- ================================ MELEE WEAPONS ==================================== -->
+			
+				<!-- ReviaSerratedScythe -->	
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="ReviaSerratedScythe"]/tools</xpath>
@@ -40,8 +42,8 @@
 								</capacities>
 								<power>40</power>
 								<cooldownTime>3.5</cooldownTime>
-								<armorPenetrationBlunt>1.8</armorPenetrationBlunt>
-								<armorPenetrationSharp>3.24</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.87</armorPenetrationBlunt>
+								<armorPenetrationSharp>1.8</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 							</li>
 						</tools>
@@ -66,7 +68,7 @@
 					<xpath>/Defs/ThingDef[defName="ReviaSerratedScythe"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>2</MeleeCritChance>
+							<MeleeCritChance>1.5</MeleeCritChance>
 							<MeleeParryChance>0.78</MeleeParryChance>
 							<MeleeDodgeChance>0.67</MeleeDodgeChance>
 						</equippedStatOffsets>
@@ -96,10 +98,10 @@
 								<capacities>
 									<li>Stab</li>
 								</capacities>
-								<power>16</power>
+								<power>15</power>
 								<cooldownTime>1.8</cooldownTime>
 								<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
-								<armorPenetrationSharp>1.32</armorPenetrationSharp>
+								<armorPenetrationSharp>2.48</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 							</li>
 							<li Class="CombatExtended.ToolCE">
@@ -110,7 +112,7 @@
 								<power>16</power>
 								<cooldownTime>1.8</cooldownTime>
 								<armorPenetrationBlunt>1.782</armorPenetrationBlunt>
-								<armorPenetrationSharp>0.8</armorPenetrationSharp>
+								<armorPenetrationSharp>1.623</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 							</li>
 						</tools>
@@ -136,7 +138,7 @@
 					<xpath>/Defs/ThingDef[defName="ReviaSerratedSword"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>1.8</MeleeCritChance>
+							<MeleeCritChance>1.3</MeleeCritChance>
 							<MeleeParryChance>0.58</MeleeParryChance>
 							<MeleeDodgeChance>0.48</MeleeDodgeChance>
 						</equippedStatOffsets>
@@ -185,7 +187,7 @@
 								</capacities>
 								<power>9</power>
 								<cooldownTime>1.75</cooldownTime>
-								<armorPenetrationBlunt>1.532</armorPenetrationBlunt>
+								<armorPenetrationBlunt>3.532</armorPenetrationBlunt>
 								<armorPenetrationSharp>8.79</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 							</li>
@@ -212,7 +214,7 @@
 					<xpath>/Defs/ThingDef[defName="ReviaSerratedDagger"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>2</MeleeCritChance>
+							<MeleeCritChance>1.8</MeleeCritChance>
 							<MeleeParryChance>0.25</MeleeParryChance>
 							<MeleeDodgeChance>0.1</MeleeDodgeChance>
 						</equippedStatOffsets>
@@ -251,8 +253,8 @@
 								</capacities>
 								<power>30</power>
 								<cooldownTime>2.65</cooldownTime>
-								<armorPenetrationBlunt>6.75</armorPenetrationBlunt>
-								<armorPenetrationSharp>6.67</armorPenetrationSharp>
+								<armorPenetrationBlunt>7.75</armorPenetrationBlunt>
+								<armorPenetrationSharp>7.67</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 							</li>
 						</tools>
@@ -278,7 +280,7 @@
 					<xpath>/Defs/ThingDef[defName="ReviaChainSword"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>0.54</MeleeCritChance>
+							<MeleeCritChance>0.42</MeleeCritChance>
 							<MeleeParryChance>0.27</MeleeParryChance>
 							<MeleeDodgeChance>0.13</MeleeDodgeChance>
 						</equippedStatOffsets>
@@ -316,8 +318,8 @@
 								</capacities>
 								<power>62</power>
 								<cooldownTime>3.2</cooldownTime>
-								<armorPenetrationBlunt>3.6</armorPenetrationBlunt>
-								<armorPenetrationSharp>5.62</armorPenetrationSharp>
+								<armorPenetrationBlunt>1.74</armorPenetrationBlunt>
+								<armorPenetrationSharp>3.6</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 							</li>
 						</tools>
@@ -328,7 +330,7 @@
 					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedScythe"]/statBases</xpath>
 					<value>
 						<Bulk>13</Bulk>
-						<MeleeCounterParryBonus>0.67</MeleeCounterParryBonus>
+						<MeleeCounterParryBonus>0.7</MeleeCounterParryBonus>
 					</value>
 				</li>
 				
@@ -342,9 +344,9 @@
 					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedScythe"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>2.5</MeleeCritChance>
-							<MeleeParryChance>0.78</MeleeParryChance>
-							<MeleeDodgeChance>0.67</MeleeDodgeChance>
+							<MeleeCritChance>1.8</MeleeCritChance>
+							<MeleeParryChance>0.8</MeleeParryChance>
+							<MeleeDodgeChance>0.7</MeleeDodgeChance>
 						</equippedStatOffsets>
 					</value>
 				</li>
@@ -374,7 +376,7 @@
 								<power>28</power>
 								<cooldownTime>1.6</cooldownTime>
 								<armorPenetrationBlunt>1.11</armorPenetrationBlunt>
-								<armorPenetrationSharp>2.64</armorPenetrationSharp>
+								<armorPenetrationSharp>5.96</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 							</li>
 							<li Class="CombatExtended.ToolCE">
@@ -385,7 +387,7 @@
 								<power>28</power>
 								<cooldownTime>1.6</cooldownTime>
 								<armorPenetrationBlunt>3.564</armorPenetrationBlunt>
-								<armorPenetrationSharp>1.6</armorPenetrationSharp>
+								<armorPenetrationSharp>3.246</armorPenetrationSharp>
 								<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
 							</li>
 						</tools>
@@ -411,9 +413,9 @@
 					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedSword"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>2.4</MeleeCritChance>
-							<MeleeParryChance>0.58</MeleeParryChance>
-							<MeleeDodgeChance>0.48</MeleeDodgeChance>
+							<MeleeCritChance>1.5</MeleeCritChance>
+							<MeleeParryChance>0.6</MeleeParryChance>
+							<MeleeDodgeChance>0.5</MeleeDodgeChance>
 						</equippedStatOffsets>
 					</value>
 				</li>
@@ -425,7 +427,7 @@
 					</value>
 				</li>
 				
-				<!-- ReviaSerratedDagger ===I'll go ahead and believe this was the Blessed version=== -->			
+				<!-- ReviaBlessedSerratedDagger -->			
 
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedDagger"]/tools</xpath>
@@ -487,7 +489,7 @@
 					<xpath>/Defs/ThingDef[defName="ReviaBlessedSerratedDagger"]</xpath>
 					<value>
 						<equippedStatOffsets>
-							<MeleeCritChance>3</MeleeCritChance>
+							<MeleeCritChance>2.2</MeleeCritChance>
 							<MeleeParryChance>0.25</MeleeParryChance>
 							<MeleeDodgeChance>0.1</MeleeDodgeChance>
 						</equippedStatOffsets>
