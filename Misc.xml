@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Revia Race</li>
+    </mods>
+    
+          <match Class="PatchOperationSequence">
+            <success>Always</success>
+              <operations>
+                
+                <li Class="PatchOperationRemove">
+                  <xpath>/Defs/ScenarioDef[defName="ReviaExclave"]/parts/li[thingDef="ReviaThrowingKnife"]</xpath>
+                </li>
+                
+              </operations>
+            </match>
+  </Operation>
+</Patch>           
